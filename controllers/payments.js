@@ -5,7 +5,7 @@ module.exports = function(app) {
 
     app.post('/payments/payment', (req, res) => {
         var payment = req.body;
-        console.log(payment);
-        res.send('OK');
+        payment.title = "pay";
+        res.send(payment);
     });
 }

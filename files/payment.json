@@ -1,0 +1,6 @@
+{
+    "method_payment": "payfast",
+    "amount": 10.90,
+    "currency": "BRL",
+    "description": "this is a desc"
+}
