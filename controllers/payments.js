@@ -1,4 +1,5 @@
 module.exports = function (app) {
+    
     app.get('/payments', function (req, res) {
         res.send("processing payments..")
     });
@@ -11,7 +12,6 @@ module.exports = function (app) {
         var paymentDao = new app.persistence.paymentDao(conn);
 
         paymentDao.save(payment, (err, result) => {
-            console.log(err);
             res.json(result);
         });
     });
