@@ -12,7 +12,11 @@ module.exports = function (app) {
         var paymentDao = new app.persistence.paymentDao(conn);
 
         paymentDao.save(payment, (err, result) => {
-            res.json(result);
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.json(result);
+            }
         });
     });
 }
