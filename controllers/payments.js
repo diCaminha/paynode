@@ -13,7 +13,7 @@ module.exports = function (app) {
 
         paymentDao.save(payment, (err, result) => {
             if (err) {
-                res.status(500).send(err);
+                res.status(400).send(err);
             } else {
                 res.json(result);
             }
