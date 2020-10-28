@@ -13,3 +13,7 @@ PaymentDao.prototype.list = function (callback) {
 PaymentDao.prototype.getById = function (id, callback) {
     this._connection.query('select * from payments where id = ' + [id], callback);
 }
+
+module.exports = function() {
+    return PaymentDao;
+}
